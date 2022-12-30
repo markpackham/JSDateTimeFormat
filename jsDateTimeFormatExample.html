@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time Format Example</title>
+</head>
+<body>
+    
+    <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat -->
+
+    <script>
+        let today = new Date();
+        
+        dtFormat = new Intl.DateTimeFormat("en-uk", {
+          dayPeriod: "long",
+        });
+        document.writeln("<br>")
+        document.writeln(dtFormat.format(today))
+
+        dtFormat = new Intl.DateTimeFormat("en-uk", {
+            timeZoneName : "longGeneric",
+        });
+        document.writeln("<br>")
+        document.writeln(dtFormat.format(today))
+
+        dtFormat = new Intl.DateTimeFormat("en-uk", {
+            year : "numeric",
+        });
+        document.writeln("<br>")
+        document.writeln(dtFormat.format(today))
+
+        dtFormat = new Intl.DateTimeFormat("en-uk", {
+          dateStyle: "full",
+          timeStyle: "full"
+        });
+        document.writeln("<br>")
+        document.writeln(dtFormat.format(today))
+
+          dtFormat = new Intl.DateTimeFormat("en-uk", {
+          dateStyle: "short",
+          timeStyle: "short"
+        });  
+        document.writeln("<br>")
+        document.writeln(dtFormat.format(today))
+
+        dtFormat = new Intl.DateTimeFormat("en-uk", {
+          dateStyle: "long",
+          timeStyle: "long"
+        });
+        document.writeln("<br>")
+        document.writeln(dtFormat.format(today))
+
+        </script>
+</body>
+</html>
