@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intl.ListFormat Example</title>
+</head>
+<body>
+    
+    <script>
+
+        const array = ["one","two","three","four","five"];
+        let formatArr = new Intl.ListFormat("en-uk");
+
+        document.writeln("<br>")
+        // one, two, three, four and five
+        document.writeln(formatArr.format(array))
+
+
+        document.writeln("<br>")
+        formatArr = new Intl.ListFormat("en-uk",{
+            type: "disjunction",
+        });
+        // one, two, three, four or five
+        document.writeln(formatArr.format(array))
+
+        </script>
+</body>
+</html>
