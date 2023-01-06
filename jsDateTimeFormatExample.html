@@ -13,39 +13,39 @@
     <script>
         let today = new Date();
         
-        dtFormat = new Intl.DateTimeFormat("en-uk", {
+        dtFormat = new Intl.DateTimeFormat("en-GB", {
           dayPeriod: "long",
         });
         document.writeln("<br>")
         document.writeln(dtFormat.format(today))
 
-        dtFormat = new Intl.DateTimeFormat("en-uk", {
+        dtFormat = new Intl.DateTimeFormat("en-GB", {
             timeZoneName : "longGeneric",
         });
         document.writeln("<br>")
         document.writeln(dtFormat.format(today))
 
-        dtFormat = new Intl.DateTimeFormat("en-uk", {
+        dtFormat = new Intl.DateTimeFormat("en-GB", {
             year : "numeric",
         });
         document.writeln("<br>")
         document.writeln(dtFormat.format(today))
 
-        dtFormat = new Intl.DateTimeFormat("en-uk", {
+        dtFormat = new Intl.DateTimeFormat("en-GB", {
           dateStyle: "full",
           timeStyle: "full"
         });
         document.writeln("<br>")
         document.writeln(dtFormat.format(today))
 
-          dtFormat = new Intl.DateTimeFormat("en-uk", {
+          dtFormat = new Intl.DateTimeFormat("en-GB", {
           dateStyle: "short",
           timeStyle: "short"
         });  
         document.writeln("<br>")
         document.writeln(dtFormat.format(today))
 
-        dtFormat = new Intl.DateTimeFormat("en-uk", {
+        dtFormat = new Intl.DateTimeFormat("en-GB", {
           dateStyle: "long",
           timeStyle: "long"
         });

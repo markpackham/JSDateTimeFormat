@@ -9,9 +9,10 @@
 <body>
     
     <script>
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 
         const array = ["one","two","three","four","five"];
-        let formatArr = new Intl.ListFormat("en-uk");
+        let formatArr = new Intl.ListFormat("en-GB");
 
         document.writeln("<br>")
         // one, two, three, four and five
@@ -19,10 +20,18 @@
 
 
         document.writeln("<br>")
-        formatArr = new Intl.ListFormat("en-uk",{
+        formatArr = new Intl.ListFormat("en-GB",{
             type: "disjunction",
         });
         // one, two, three, four or five
+        document.writeln(formatArr.format(array))
+
+        document.writeln("<br>")
+        formatArr = new Intl.ListFormat("en-GB",{
+            style: "short", type: "conjunction" 
+        });
+        console.log(formatArr.format(array))
+        // one, two, three, four & five
         document.writeln(formatArr.format(array))
 
         </script>
