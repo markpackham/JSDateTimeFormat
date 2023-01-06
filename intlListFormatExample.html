@@ -27,11 +27,11 @@
         document.writeln(formatArr.format(array))
 
         document.writeln("<br>")
-        formatArr = new Intl.ListFormat("en-GB",{
+        formatArr = new Intl.ListFormat("en-US",{
             style: "short", type: "conjunction" 
         });
         console.log(formatArr.format(array))
-        // one, two, three, four & five
+        // one, two, three, four & five - have to use US for ampersand
         document.writeln(formatArr.format(array))
 
         </script>
